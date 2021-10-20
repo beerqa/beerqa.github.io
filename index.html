@@ -10,7 +10,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@qi2peng2">
     <meta name="twitter:creator" content="@qi2peng2">
-    <meta name="twitter:title" content="BeerQA: A Dataset for Open-Domain Variable-hop Question Answering">
+    <meta name="twitter:title" content="BeerQA: A Dataset for Open-Domain Varying-hop Question Answering">
     <meta name="twitter:description" content="BeerQA is a question answering dataset featuring natural, multi-hop questions, with strong supervision for supporting facts to enable more explainable question answering systems. It is collected by a team of NLP researchers at Carnegie Mellon University, Stanford University, and Université de Montréal.">
     <meta name="twitter:image" content="https://beerqa.github.io/img/index.jpeg">
     <meta property="og:image" content="https://beerqa.github.io/img/index.jpeg">
@@ -36,7 +36,7 @@
   "@context":"https://schema.org/",
   "@type":"Dataset",
   "name":"BeerQA",
-  "description":"BeerQA is a question answering dataset featuring natural, multi-hop questions, with strong supervision for supporting facts to enable more explainable question answering systems built based on Wikipedia.",
+  "description":"BeerQA is a question answering dataset featuring natural, single- and multi-hop questions in a realistic open-domain setting to enable question answering systems built based on Wikipedia.",
   "url":"https://beerqa.github.io/",
   "keywords":[
      "Question Answering",
@@ -47,7 +47,7 @@
   "creator":{
      "@type":"Organization",
      "url": "https://beerqa.github.io/",
-     "name":"Carnegie Mellon University, Stanford University, Université de Montréal",
+     "name":"JD AI Research, Samsung Research, Stanford University",
      "contactPoint":{
         "@type":"ContactPoint",
         "contactType": "customer service",
@@ -59,22 +59,17 @@
      {
         "@type":"DataDownload",
         "encodingFormat":"JSON",
-        "contentUrl":"http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_train_v1.1.json"
+        "contentUrl":"https://nlp.stanford.edu/projects/beerqa/beerqa_train_v1.0.json"
      },
      {
         "@type":"DataDownload",
         "encodingFormat":"JSON",
-        "contentUrl":"http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_dev_distractor_v1.json"
+        "contentUrl":"https://nlp.stanford.edu/projects/beerqa/beerqa_dev_v1.0.json"
      },
      {
         "@type":"DataDownload",
         "encodingFormat":"JSON",
-        "contentUrl":"http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_dev_fullwiki_v1.json"
-     },
-     {
-        "@type":"DataDownload",
-        "encodingFormat":"JSON",
-        "contentUrl":"http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_test_fullwiki_v1.json"
+        "contentUrl":"https://nlp.stanford.edu/projects/beerqa/beerqa_test_questions_v1.0.json"
      }
   ]
 }
@@ -104,7 +99,7 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
           <h1>BeerQA</h1>
-          <span class="subheading">A Dataset for Open-Domain <span class="line">Variable-hop</span> <span class="line">Question Answering</span></span>
+          <span class="subheading">A Dataset for Open-Domain <span class="line">Varying-hop</span> <span class="line">Question Answering</span></span>
         </div>
       </div>
     </div>
@@ -118,7 +113,7 @@
     <div class="col-lg-4">
       <div class="list-group">
         <div class="list-group-item"><h4>What is BeerQA?</h4>
-        <p>BeerQA ...</p>
+        <p>BeerQA is an open-domain question answering dataset that features questions requiring information from one or more documents to answer. Systems need to find these documents from a large collection of Wikipedia documents, which presents a more realistic challenge for open-domain question answering systems on an open collection of text. This dataset is constructed based on the <a href="https://rajpurkar.github.io/SQuAD-explorer/">Stanford Question Answering Dataset (SQuAD)</a> and the <a href="https://hotpotqa.github.io">HotpotQA dataset</a>, by a team of NLP researchers at <a href="https://air.jd.com/">JD AI Research</a>, <a href="https://research.samsung.com/">Samsung Research</a>, and <a href="https://nlp.stanford.edu/">Stanford University</a>.</p>
         <p>For more details about BeerQA, please refer to our EMNLP 2021 paper:</p>
         <p class="text-center">
           <a href="https://arxiv.org/pdf/2010.12527.pdf"><button type="button" class="btn btn-info">(Qi, Lee, Sido, &amp; Manning 2021)</button></a>
@@ -127,36 +122,33 @@
         <div class="list-group-item"><h4>Getting started</h4>
         <p>BeerQA is distributed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>. The training and development sets can be downloaded below.</p>
         <p class="text-center">
-          <a href="http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_train_v1.1.json"><button type="button" class="btn btn-success">Training set (535MB)</button></a>
+          <a href="https://nlp.stanford.edu/projects/beerqa/beerqa_train_v1.0.json"><button type="button" class="btn btn-success">Training set (153MB)</button></a>
         </p>
         <p class="text-center">
-          <a href="http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_dev_distractor_v1.json"><button type="button" class="btn btn-secondary">Dev set (distractor) (44MB)</button></a>
+          <a href="https://nlp.stanford.edu/projects/beerqa/beerqa_dev_v1.0.json"><button type="button" class="btn btn-secondary">Dev set (16MB)</button></a>
         </p>
         <p class="text-center">
-          <a href="http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_dev_fullwiki_v1.json"><button type="button" class="btn btn-secondary">Dev set (fullwiki) (45MB)</button></a>
+          <a href="https://nlp.stanford.edu/projects/beerqa/beerqa_test_questions_v1.0.json"><button type="button" class="btn btn-secondary">Test set questions (2.1MB)</button></a>
         </p>
+        <p>A more comprehensive summary about data download, preprocessing, baseline model training, and evaluation is included in our <a href="https://github.com/beerqa/IRRR">GitHub repository</a>, and linked below.
         <p class="text-center">
-          <a href="http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_test_fullwiki_v1.json"><button type="button" class="btn btn-secondary">Test set (fullwiki) (46MB)</button></a>
-        </p>
-        <p>A more comprehensive summary about data download, preprocessing, baseline model training, and evaluation is included in our <a href="https://github.com/hotpotqa/hotpot">GitHub repository</a>, and linked below.
-        <p class="text-center">
-          <a href="https://github.com/hotpotqa/hotpot/blob/master/README.md"><button type="button" class="btn btn-secondary">Getting started guide</button></a>
+          <a href="https://github.com/beerqa/IRRR/blob/master/README.md"><button type="button" class="btn btn-secondary">Getting started guide</button></a>
         </p>
         <p>
-        Once you have built your model, you can use the evaluation script we provide below to evaluate model performance by running <code>python hotpot_evaluate_v1.py &lt;path_to_prediction&gt; &lt;path_to_gold&gt;</code>
+        Once you have built your model, you can use the evaluation script we provide below to evaluate model performance by running <code>python beerqa_evaluate_v1.py &lt;path_to_prediction&gt; &lt;path_to_gold&gt;</code>
         </p>
         <p class="text-center">
-          <a href="https://raw.githubusercontent.com/hotpotqa/hotpot/master/hotpot_evaluate_v1.py"><button type="button" class="btn btn-secondary">Evaluation script (4.2KB)</button></a>
+          <a href="https://raw.githubusercontent.com/beerqa/IRRR/master/beerqa_evaluate_v1.py"><button type="button" class="btn btn-secondary">Evaluation script (4.2KB)</button></a>
         </p>
         <p class="text-center">
-          <a href="http://curtis.ml.cmu.edu/datasets/hotpot/sample_dev_pred.json"><button type="button" class="btn btn-secondary">Sample dev prediction (982KB)</button></a>
+          <a href="https://nlp.stanford.edu/projects/beerqa/sample_dev_pred.json"><button type="button" class="btn btn-secondary">Sample dev prediction (982KB)</button></a>
         </p>
         <p>To submit your models and evaluate them on the official test sets, please read our submission guide hosted on Codalab.</p>
         <p class="text-center">
-          <a href="https://worksheets.codalab.org/worksheets/0xa8718c1a5e9e470e84a7d5fb3ab1dde2/"><button type="button" class="btn btn-info">Submission Guide</button></a>
+          <a href="https://worksheets.codalab.org/worksheets/0x1647bab264a34ca4b7ea6c0c02d8a669"><button type="button" class="btn btn-info">Submission Guide</button></a>
         </p>
         <p>
-        We also release the processed Wikipedia used in the process of creating HotpotQA (also under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>), serving both as the corpus for the <em>fullwiki</em> setting in our evaluation, and hopefully as a standalone resource for future researches involving processed text on Wikipedia. Below please find the link to the documentation for this corpus.
+        We also release the processed Wikipedia used in the process of creating BeerQA (also under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 License</a>), serving both as the corpus for the <em>fullwiki</em> setting in our evaluation, and hopefully as a standalone resource for future researches involving processed text on Wikipedia. Below please find the link to the documentation for this corpus.
         </p>
         <p class="text-center">
           <a href="wiki-readme.html"><button type="button" class="btn btn-info">Processed Wikipedia README</button></a>
@@ -187,7 +179,7 @@
             <th scope="col" rowspan=2></th>
             <th scope="col" rowspan=2 class="align-middle text-center">Model</th>
             <th scope="col" rowspan=2 class="align-middle text-center">Code</th>
-            <th scope="col" rowspan=2 class="align-middle text-center">External<br>Resources</th>
+            <th scope="col" rowspan=2 class="align-middle text-center">Ext.<br>Res.</th>
             <th scope="col" colspan=2 class='text-center'>SQuAD Open</th>
             <th scope="col" colspan=2 class='text-center'>HotpotQA</th>
             <th scope="col" colspan=2 class='text-center'>3+ Hop Challenge</th>
@@ -228,6 +220,9 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>$(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })</script>
 
     <!-- Custom scripts for this template -->
     <script src="js/clean-blog.min.js"></script>
