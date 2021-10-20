@@ -113,7 +113,7 @@
     <div class="col-lg-4">
       <div class="list-group">
         <div class="list-group-item"><h4>What is BeerQA?</h4>
-        <p>BeerQA is an open-domain question answering dataset that features questions requiring information from one or more documents to answer. Systems need to find these documents from a large collection of Wikipedia documents, which presents a more realistic challenge for open-domain question answering systems on an open collection of text. This dataset is constructed based on the <a href="https://rajpurkar.github.io/SQuAD-explorer/">Stanford Question Answering Dataset (SQuAD)</a> and the <a href="https://hotpotqa.github.io">HotpotQA dataset</a>, by a team of NLP researchers at <a href="https://air.jd.com/">JD AI Research</a>, <a href="https://research.samsung.com/">Samsung Research</a>, and <a href="https://nlp.stanford.edu/">Stanford University</a>.</p>
+        <p>BeerQA is an open-domain question answering dataset that features questions requiring information from one or more Wikipedia documents to answer, which presents a more realistic challenge for open-domain question answering. BeerQA is constructed based on the <a href="https://rajpurkar.github.io/SQuAD-explorer/">Stanford Question Answering Dataset (SQuAD)</a> and the <a href="https://hotpotqa.github.io">HotpotQA dataset</a>, by a team of NLP researchers at <a href="https://air.jd.com/">JD AI Research</a>, <a href="https://research.samsung.com/">Samsung Research</a>, and <a href="https://nlp.stanford.edu/">Stanford University</a>.</p>
         <p>For more details about BeerQA, please refer to our EMNLP 2021 paper:</p>
         <p class="text-center">
           <a href="https://arxiv.org/pdf/2010.12527.pdf"><button type="button" class="btn btn-info">(Qi, Lee, Sido, &amp; Manning 2021)</button></a>
@@ -172,7 +172,7 @@
       Leaderboard
     </div>
     <div class="card-body">
-      The BeerQA benchmark consists of question answering data from three sources: SQuAD, HotpotQA, as well as newly annotated questions that require at least three supporting documents from Wikipedia to answer that are only available as test data to test systems' ability to generalize to this unseen scenario during training. We report answer exact match (EM) and F1 metrics on each of these subsets of the test set, as well as the macro average score over the three subsets as the main evaluation metric to rank systems.
+      The BeerQA benchmark consists of question answering data from three sources: SQuAD, HotpotQA, as well as newly annotated questions that require at least three supporting documents from Wikipedia to answer to test zero-shot generalization. We evaluate systems on answer exact match (EM) and F1 metrics on each of these subsets, and use the macro average as the main evaluation metric.
       <table class="table table-responsive">
         <thead class="thead-light">
           <tr>
